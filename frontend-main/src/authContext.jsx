@@ -46,7 +46,7 @@ export const AuthProvider = ({ children }) => {
   ========================= */
   const logout = () => {
     localStorage.clear();
-    window.location.replace("/auth");
+    window.location.replace("/");
   };
 
   /* =========================
