@@ -7,7 +7,7 @@
     "start": "node index.js start"
   },
   "keywords": [],
-  "author": "Vinayak P,
+  "author": "Vinayak P",
   "license": "ISC",
   "dependencies": {
     "aws-sdk": "^2.1657.0",
