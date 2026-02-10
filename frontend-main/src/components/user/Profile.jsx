@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./profile.css";
 import Navbar from "../Navbar";
 import API from "../../api/axios";
+import logo from "../../assets/logo.png";
 import { useNavigate } from "react-router-dom";
 
 const Profile = () => {
@@ -74,16 +75,17 @@ const Profile = () => {
         <div className="user-profile-section">
 
           <img
-            className="profile-image"
-            src={
-              preview
+              className="profile-image"
+              src={
+                preview
                 ? preview
                 : storedImage
-                ? `http://localhost:3000${storedImage}`
-                : "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-            }
-            alt="profile"
+                ? `${import.meta.env.VITE_API_URL}${storedImage}`
+                : logo
+              }
+              alt="profile"
           />
+
 
           <label className="upload-btn">
             Change profile photo
